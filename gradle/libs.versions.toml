@@ -1,11 +1,13 @@
 [versions]
-accompanist = "0.28.0"
-androidx-lifecycle = "2.6.0-alpha03"
-compose = "1.4.0-alpha03"
-compose_m3 = "1.1.0-alpha03"
-compose_compiler = "1.4.0-alpha02"
+accompanist = "0.29.1-alpha"
+androidx-lifecycle = "2.6.0-beta01"
+compose = "1.4.0-beta01"
+compose_compiler = "1.4.2"
+compose_m3 = "1.1.0-alpha06"
 compose_motion = "0.11.0-alpha"
-hilt = "2.44.2"
+hilt = "2.45"
+kotlin = "1.8.10"
+ktor = "2.2.3"
 richText = "0.16.0"
 
 [libraries]
@@ -22,13 +24,13 @@ androidCustomViewPoolingContainer = "androidx.customview:customview-poolingconta
 androidLifecycleCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidLifecycleKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
 androidPalette = "androidx.palette:palette-ktx:1.0.0"
-composeActivity = "androidx.activity:activity-compose:1.7.0-alpha02"
+composeActivity = { module = "androidx.activity:activity-compose", version.ref = "compose" }
 composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
 composeMaterial3 = { module = "androidx.compose.material3:material3", version.ref = "compose_m3" }
 composeMaterialIcons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
 composeMotionCore = { module = "io.github.fornewid:material-motion-compose-core", version.ref = "compose_motion" }
 composeMotionNavigation = { module = "io.github.fornewid:material-motion-compose-navigation", version.ref = "compose_motion" }
-composeNavigation = "androidx.navigation:navigation-compose:2.6.0-alpha04"
+composeNavigation = "androidx.navigation:navigation-compose:2.6.0-alpha05"
 composeTestManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -38,6 +40,13 @@ hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" 
 hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 hiltNavigation = "androidx.hilt:hilt-navigation-compose:1.1.0-alpha01"
 javaInject = "javax.inject:javax.inject:1"
+kotlinxSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0-RC"
+ktor = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktorClientAuth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktorContentNegolation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktorCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+pagingCompose = "androidx.paging:paging-compose:1.0.0-alpha18"
 richTextMarkdown = { module = "com.halilibo.compose-richtext:richtext-commonmark", version.ref = "richText" }
 richTextMaterial3 = { module = "com.halilibo.compose-richtext:richtext-ui-material3", version.ref = "richText" }
 
@@ -72,16 +81,23 @@ compose = [
     "composeNavigation",
     "composeUi",
     "composeUiUtil",
+    "composeUiToolingPreview",
 ]
 composeDebug = [
     "composeTestManifest",
     "composeUiTooling",
-    "composeUiToolingPreview",
 ]
 hilt = [
     "hiltAndroid",
     "hiltCompiler",
     "hiltNavigation",
+]
+ktor = [
+    "ktor",
+    "ktorClientAuth",
+    "ktorContentNegolation",
+    "ktorCore",
+    "ktorJson",
 ]
 richText = [
     "richTextMarkdown",
@@ -90,3 +106,5 @@ richText = [
 
 [plugins]
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

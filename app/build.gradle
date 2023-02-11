@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'ru.toxyxd.template'
+    namespace 'ru.toxyxd.adguardhome'
     compileSdk 33
 
     defaultConfig {
-        applicationId "ru.toxyxd.template"
+        applicationId "ru.toxyxd.adguardhome"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -21,8 +21,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -57,7 +59,10 @@ dependencies {
     implementation libs.hiltNavigation
     implementation libs.hiltAndroid
     kapt libs.hiltCompiler
-    implementation project(':feature:base')
 
+    implementation project(':domain')
+
+    implementation project(':feature:base')
     implementation project(":feature:home")
+    implementation project(":feature:server")
 }

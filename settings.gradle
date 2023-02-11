@@ -12,8 +12,12 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Template"
+rootProject.name = "AdGuard Home Manager"
 include ':app'
 include ':uikit'
 include ':feature:base'
 include ':feature:home'
+include ':data'
+include ':domain'
+include ':feature:server'
+include ':common-ui'

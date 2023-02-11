@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status">Статус</string>
+    <string name="clients">Клиенты</string>
+    <string name="auto_clients">Автоматические клиенты</string>
+    <string name="rule_filtering">Фильтрация по правилам</string>
+    <string name="safe_search">Безопасный поиск</string>
+    <string name="parental_filtering">Родительский контроль</string>
+    <string name="global_settings">Глобальные настройки</string>
+    <string name="uses">Использует</string>
+    <string name="logs">Логи</string>
+    <string name="server_status">Статус сервера</string>
+    <string name="blocked_by_filters">Заблокировано фильтрами</string>
+    <string name="dns_queries">DNS-запросы</string>
+    <string name="blocked_by_parental">Заблокировано \"взрослых\" сайтов</string>
+    <string name="blocked_by_safebrowsing">Вредоносные и фишинговые сайты</string>
+    <string name="safe_browsing">Безопасный браузинг</string>
+</resources>

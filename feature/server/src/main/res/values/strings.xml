@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status">Status</string>
+    <string name="clients">Clients</string>
+    <string name="logs">Logs</string>
+
+    <string name="auto_clients">Auto clients</string>
+
+    <string name="rule_filtering">Rule filtering</string>
+    <string name="safe_browsing">Safe browsing</string>
+    <string name="safe_search">Safe search</string>
+    <string name="parental_filtering">Parental filtering</string>
+
+    <string name="global_settings">Global settings</string>
+
+    <string name="uses">Uses</string>
+
+    <string name="server_status">Server status</string>
+    <string name="dns_queries">DNS Queries</string >
+    <string name="blocked_by_filters">Blocked by filters</string>
+    <string name="blocked_by_parental">Blocked adult websites</string>
+    <string name="blocked_by_safebrowsing">Blocked malware/fishing</string>
+</resources>

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'ru.toxyxd.template.uikit'
+    namespace 'ru.toxyxd.adguardhome.uikit'
     compileSdk 33
 
     defaultConfig {

@@ -13,7 +13,7 @@ typealias Destinations = Map<Class<out FeatureEntry>, @JvmSuppressWildcards Feat
 
 interface FeatureEntry
 
-interface ComposableFeatureEntry: FeatureEntry {
+interface ComposableFeatureEntry : FeatureEntry {
     val featureRoute: String
 
     val arguments: List<NamedNavArgument>
@@ -39,7 +39,7 @@ interface ComposableFeatureEntry: FeatureEntry {
     )
 }
 
-interface NestedFeatureEntry: FeatureEntry {
+interface NestedFeatureEntry : FeatureEntry {
     val graphRoute: String
     val startDestination: String
 
@@ -65,7 +65,14 @@ interface HasFullscreenRoutes {
         get() = emptyList()
 }
 
-inline fun <reified T : FeatureEntry> Destinations.find(): T = findOrNull() ?: error("Destination '${T::class.java}' is not defined.")
+interface ProvidesBottomNavigation {
+    val bottomNavigationEntries: List<NavigationEntry>
+        get() = emptyList()
+}
+
+inline fun <reified T : FeatureEntry> Destinations.find(): T =
+    findOrNull() ?: error("Destination '${T::class.java}' is not defined.")
+
 inline fun <reified T : FeatureEntry> Destinations.findOrNull(): T? = this[T::class.java] as? T
 
 @Stable
