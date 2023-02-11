@@ -26,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.toxyxd.adguardhome.domain.model.clients.Client
+import ru.toxyxd.common_ui.ext.DarkGreen
 import ru.toxyxd.feature.server.R
 import java.util.Locale
 
@@ -58,22 +59,22 @@ fun Client(
                 Icon(
                     if (client.filteringEnabled) Icons.Rounded.FilterAlt else Icons.Rounded.FilterAltOff,
                     contentDescription = stringResource(id = R.string.rule_filtering),
-                    tint = if (client.filteringEnabled) Color.Green else Color.Red,
+                    tint = if (client.filteringEnabled) Color.DarkGreen() else Color.Red,
                 )
                 Icon(
                     Icons.Rounded.VpnLock,
                     contentDescription = stringResource(id = R.string.safe_browsing),
-                    tint = if (client.safebrowsingEnabled) Color.Green else Color.Red,
+                    tint = if (client.safebrowsingEnabled) Color.DarkGreen() else Color.Red,
                 )
                 Icon(
                     if (client.parentalEnabled) Icons.Rounded.ChildFriendly else Icons.Rounded.ChildCare,
                     contentDescription = stringResource(id = R.string.parental_filtering),
-                    tint = if (client.parentalEnabled) Color.Green else Color.Red,
+                    tint = if (client.parentalEnabled) Color.DarkGreen() else Color.Red,
                 )
                 Icon(
                     if (client.safesearchEnabled) Icons.Rounded.Search else Icons.Rounded.SearchOff,
                     contentDescription = stringResource(id = R.string.safe_search),
-                    tint = if (client.safesearchEnabled) Color.Green else Color.Red,
+                    tint = if (client.safesearchEnabled) Color.DarkGreen() else Color.Red,
                 )
                 if (client.useGlobalSettings) {
                     val usesGlobalSettings =
@@ -85,7 +86,7 @@ fun Client(
                     Icon(
                         Icons.Rounded.Settings,
                         contentDescription = usesGlobalSettings,
-                        tint = Color.Green,
+                        tint = Color.DarkGreen(),
                     )
                     Text(
                         text = usesGlobalSettings,
