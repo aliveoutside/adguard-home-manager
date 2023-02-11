@@ -1,3 +1,4 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -31,7 +32,7 @@ android {
     }
 
     dependencies {
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+        implementation(libs.kotlinx.coroutines.core)
         implementation(libs.kotlinxSerializationJson)
         implementation(libs.javaInject)
     }
